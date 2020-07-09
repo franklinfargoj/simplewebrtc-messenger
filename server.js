@@ -2,6 +2,9 @@ const express = require('express');
 
 const app = express();
 const port = 3000;
+var cors = require('cors');
+
+app.use(cors());
 
 // Set public folder as root
 app.use(express.static('public'));

@@ -1,7 +1,7 @@
 window.addEventListener('load', () => {
 
-    // Chat platform
-    const chatTemplate = Handlebars.compile($('#chat-template').html());
+// Chat platform
+const chatTemplate = Handlebars.compile($('#chat-template').html());
 const chatContentTemplate = Handlebars.compile($('#chat-content-template').html());
 const chatEl = $('#chat');
 const formEl = $('.form');
@@ -32,9 +32,9 @@ const webrtc = new SimpleWebRTC({
     // the id/element dom element that will hold remote videos
     remoteVideosEl: 'remote-videos',
     // immediately ask for camera access
-    autoRequestMedia: true,
+    autoRequestMedia: false,
     debug: false,
-    detectSpeakingEvents: true,
+    detectSpeakingEvents: false,
     autoAdjustMic: false,
 });
 
@@ -146,14 +146,5 @@ $(`#${id}`).html(video);
 $(`#${id} video`).addClass('ui image medium'); // Make video element responsive
 remoteVideosCount += 1;
 });
-
-
-
-
-
-
-
-
-
 
 });
