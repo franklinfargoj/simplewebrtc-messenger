@@ -32,7 +32,7 @@ const webrtc = new SimpleWebRTC({
     // the id/element dom element that will hold remote videos
     remoteVideosEl: 'remote-videos',
     // immediately ask for camera access
-    autoRequestMedia: false,
+    autoRequestMedia: true,
     debug: false,
     detectSpeakingEvents: false,
     autoAdjustMic: false,
